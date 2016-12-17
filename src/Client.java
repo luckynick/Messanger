@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,8 +29,8 @@ public class Client extends JFrame implements Runnable, ActionListener, ListSele
     {
 //        if(args.length != 2)
 //            throw new RuntimeException("Pass address and port as arguments.");
-        Socket socket = new Socket("127.0.0.1", 80);
-        Client cl = new Client("Messanger", socket.getInputStream(), socket.getOutputStream());
+        Socket socket = new Socket("164.8.214.215", 80); //"127.0.0.1" "164.8.214.215"
+        Client cl = new Client("Messenger", socket.getInputStream(), socket.getOutputStream());
     }
 
     Client(String title, InputStream is, OutputStream os)
